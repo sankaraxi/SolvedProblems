@@ -10,5 +10,6 @@ public class TotalSurfaceAreaOfCube {
     static double totalSurfaceAreaOfCube(double side){
 
         return 6*Math.pow(side,2);  //Math.PI gives the value of pi
+        //return 6*side*side;
     }
 }
