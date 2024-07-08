@@ -15,7 +15,7 @@ public class ReverseANumber {
                 reverse = reverse*10 + digit;
                 temp/=10;
             }
-            return (reverse<Integer.MIN_VALUE) ? 0 : (int) reverse-1;
+            return (reverse<Integer.MIN_VALUE) ? 0 : (int) reverse*-1;
         }else if (x==0) {
             return 0;
         }else{
