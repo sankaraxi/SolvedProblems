@@ -17,7 +17,7 @@ public class NextPermutation {
                 index = i;
                 break;
             }
-        }
+        }//O(N) time complexity
       if(index == -1){ // if the index is -1 then the array is in descending order
           reverseArr(arr,0,arr.length-1);
           return;
@@ -29,10 +29,11 @@ public class NextPermutation {
               swapArr(arr,i,index);
               break;
           }
-      }
+      }//O(N) time complexity
 
-      reverseArr(arr,index+1,arr.length-1);
-    }
+      reverseArr(arr,index+1,arr.length-1); //O(N) time complexity
+    } //overall time complexity is O(3N) where N is the number of elements in the array
+    //space complexity is O(1) in this program and worst case space complexity is O(N)
 
 
     // helper functions
