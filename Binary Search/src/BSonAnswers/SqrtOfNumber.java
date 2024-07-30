@@ -1,5 +1,5 @@
 package BSonAnswers;
-
+//https://practice.geeksforgeeks.org/problems/square-root/1
 public class SqrtOfNumber {
     public static void main(String[] args) {
         int x = 9;
