@@ -4,24 +4,45 @@ import java.util.Arrays;
 
 public class SplitArrayLargestSum {
     public static void main(String[] args) {
-        int[] nums = {10,20,30,40};
+        int[] nums = {2, 1, 5, 6, 2, 3};
         int m = 2;
         System.out.println(splitArray(nums,m));
     }
 
-    private static int splitArray(int[] nums, int m) {
-        int low = Arrays.stream(nums).max().getAsInt();
-        int high = sum(nums);
+    private static int splitArray(int[] nums, int k) {
+        int start = Arrays.stream(nums).max().getAsInt();
+        int end = sum(nums);
 
-        for (int sum = low; sum <= high; sum++){
-            int countArray = countArray(nums,sum);
+        int ans = -1;
 
-            if(countArray == m){
-                return sum;
+        while (start <= end){
+            int mid = start + (end - start) / 2;
+
+            int countArray = countArray(nums,mid);
+
+            if(countArray <= k){
+                ans = mid;
+                end = mid - 1;
+            }else{
+                start = mid + 1;
             }
         }
-        return -1;
+        return start;
     }
+
+//    private static int splitArray(int[] nums, int m) {
+//        int low = Arrays.stream(nums).max().getAsInt();
+//        int high = sum(nums);
+//
+//        for (int sum = low; sum <= high; sum++){
+//            int countArray = countArray(nums,sum);
+//
+//            if(countArray == m){
+//                return sum;
+//            }
+//        }
+//        return -1;
+//    }
 
     private static int countArray(int[] nums, int sum) {
         int arrays = 1;
