@@ -3,9 +3,10 @@ package easyProblems.deletion;
 
 public class DeleteValue {
     public static void main(String[] args) {
-        int[] arr = {16,19,20,21,27,87,4664};
+//        int[] arr = {16,19,20,21,27,87,4664};
+        int[] arr = {7,7,7,7};
         Node head = convertArrayToLinkedList(arr);
-        head = deleteValue(head , 20);
+        head = deleteValue(head , 7);
         Node temp = head;
         while (temp != null){
             System.out.print(temp.data + "->");
