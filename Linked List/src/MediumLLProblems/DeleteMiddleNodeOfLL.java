@@ -1,19 +1,19 @@
 package MediumLLProblems;
-//https://leetcode.com/problems/middle-of-the-linked-list/description/
-public class MiddleNodeOfLL {
+
+public class DeleteMiddleNodeOfLL {
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
         Node head = createLinkedList(arr);
 
-        Node middle = middleNode(head);
-        Node temp = middle;
+        Node newHead = deleteMiddleNode(head);
+        Node temp = newHead;
         while (temp != null){
             System.out.print(temp.data +"->" );
             temp = temp.next;
         }
     }
 
-    static Node middleNode(Node head) {
+    static Node deleteMiddleNode(Node head) {
 
         if (head == null || head.next == null){
             return head;
