@@ -1,5 +1,5 @@
 package MediumLLProblems;
-
+//https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/
 public class DeleteMiddleNodeOfLL {
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
@@ -16,16 +16,20 @@ public class DeleteMiddleNodeOfLL {
     static Node deleteMiddleNode(Node head) {
 
         if (head == null || head.next == null){
-            return head;
+            return null;
         }
+
         Node slow = head;
         Node fast = head;
+
+        fast = fast.next.next;
 
         while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
         }
-        return slow;
+        slow.next = slow.next.next;
+        return head;
     }
 
    private static Node createLinkedList(int[] arr) {
