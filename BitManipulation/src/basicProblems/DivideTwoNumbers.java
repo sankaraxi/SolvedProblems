@@ -16,9 +16,9 @@ public class DivideTwoNumbers {
         long denominator = Math.abs((long) divisor);
         int ans = 0;
 
-        while (numerator >= denominator) {
+        while (numerator >= denominator) { //O(log n)
             int count = 0;
-            while (numerator >= (denominator << (count + 1))) {
+            while (numerator >= (denominator << (count + 1))) { //O(log n)
                 count++;
             }
             ans += (1 << count);
@@ -26,5 +26,5 @@ public class DivideTwoNumbers {
         }
 
         return sign ? ans : -ans;
-    }
+    } // Time Complexity: O(log n) * O(log n), Space Complexity: O(1)
 }
