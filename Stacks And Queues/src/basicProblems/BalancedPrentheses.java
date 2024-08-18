@@ -9,7 +9,7 @@ public class BalancedPrentheses {
     }
 
     public static boolean isValid(String s) {
-        Stack<Character> st = new Stack<Character>();
+        Stack<Character> st = new Stack<>();
         for (char it : s.toCharArray()){
             if (it == '(' || it == '[' || it == '{'){
                 st.push(it);
