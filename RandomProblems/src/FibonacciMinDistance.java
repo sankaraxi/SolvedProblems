@@ -7,7 +7,7 @@ public class FibonacciMinDistance {
         System.out.println(findMinDistance(target));
     }
 
-    // Brute force
+    // Brute force solution
 
 
 //    static int findMinDistance(int n, int target){
