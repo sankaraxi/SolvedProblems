@@ -7,6 +7,8 @@ public class FibonacciMinDistance {
         System.out.println(findMinDistance(target));
     }
 
+    // Brute force
+
 
 //    static int findMinDistance(int n, int target){
 //        int [] fibo = new int[n];
