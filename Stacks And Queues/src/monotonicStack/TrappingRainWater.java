@@ -7,17 +7,48 @@ public class TrappingRainWater {
 //        int[] arr = {1,11,2,10};
         System.out.println(trap(arr));
     }
+
+//    brute
+//    public static int trap(int[] height) {
+//        int[] prefixMax = prefixMax(height);
+//        int[] suffixMax = suffixMax(height);
+//
+//        int total = 0;
+//        for (int i = 0; i < height.length; i++){
+//            int leftMax = prefixMax[i];
+//            int rightMax = suffixMax[i];
+//
+//            if (height[i] < leftMax && height[i] < rightMax){
+//                total += Math.min(leftMax,rightMax) - height[i];
+//            }
+//        }
+//        return total;
+//    }
+
     public static int trap(int[] height) {
-        int[] prefixMax = prefixMax(height);
-        int[] suffixMax = suffixMax(height);
 
+        int leftMax = 0;
+        int rightMax = 0;
         int total = 0;
-        for (int i = 0; i < height.length; i++){
-            int leftMax = prefixMax[i];
-            int rightMax = suffixMax[i];
 
-            if (height[i] < leftMax && height[i] < rightMax){
-                total += Math.min(leftMax,rightMax) - height[i];
+        int left = 0;
+        int right = height.length - 1;
+
+        while (left < right) {
+            if (height[left] <= height[right]) {
+                if (leftMax > height[left]) {
+                    total += leftMax - height[left];
+                } else {
+                    leftMax = height[left];
+                }
+                left = left + 1;
+            } else {
+                if (rightMax > height[right]) {
+                    total += rightMax - height[right];
+                } else {
+                    rightMax = height[right];
+                }
+                right = right - 1;
             }
         }
         return total;
