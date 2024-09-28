@@ -1,5 +1,5 @@
 package mediumProblems;
-
+//https://leetcode.com/problems/max-consecutive-ones-iii/description/
 public class MaximumConsecutiveOnes {
     public static void main(String[] args) {
         int[] nums = {1,1,1,0,0,0,1,1,1,1,0};
