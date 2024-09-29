@@ -24,7 +24,7 @@ public class FruitsIntoBasket {
 
             if(mpp.size() > 2){
 
-                // while (mpp.size() > 2){
+                // while (mpp.size() > 2){ //
 
                 mpp.put(arr[left], mpp.getOrDefault(arr[left],0)-1);
                 if(mpp.get(arr[left]) == 0) mpp.remove(arr[left]);
@@ -41,6 +41,8 @@ public class FruitsIntoBasket {
         }
 
         return maxLen;
+        // Time Complexity: O(n)
+        // Space Complexity: O(n)
 
 
 
@@ -58,5 +60,7 @@ public class FruitsIntoBasket {
         //     }
         // }
         // return maxLen;
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
     }
 }
