@@ -44,4 +44,6 @@ public class SubstringContainingThreeCharacters {
     // return count;
     // // Time Complexity: O(n^2)
     // // Space Complexity: O(1)
+
+    // most of the optimal solutions or derived from the above solution
 }
