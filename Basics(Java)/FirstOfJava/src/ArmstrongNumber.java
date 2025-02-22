@@ -4,7 +4,7 @@ import java.util.List;
 public class ArmstrongNumber {
     public static void main(String[] args) {
 //        int num = 370;
-        // program to print the armstrong numbers between two numbers
+        // program to print the armstrong numbers between two numbers   
         System.out.println(armstrong(0,999));
     }
     //sum of cubes of individual digits should be equal to the given digit
